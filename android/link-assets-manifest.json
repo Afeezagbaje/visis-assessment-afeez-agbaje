@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "app/assets/fonts/Jua/OFL.txt",
+      "sha1": "fa62436047e6a1f91cc59bcf1ea84cfe3dac9190"
+    },
+    {
+      "path": "app/assets/fonts/Jua-Regular.ttf",
+      "sha1": "9122d54d461d57735caeeb843b9961a96225468b"
+    }
+  ]
+}
