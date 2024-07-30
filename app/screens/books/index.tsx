@@ -15,19 +15,25 @@ export const Books: React.FC = () => {
     return (
       <View key={`Books-${index}`} style={style.bookContainer}>
         <View style={style.imageContainer}>
-          <Image
-            source={
-              book?.imageLinks?.thumbnail
-                ? {
-                    uri: book?.imageLinks?.thumbnail || book?.imageLinks?.small,
-                  }
-                : require('../../assets/images/placeholder.png')
-            }
-            width={200}
-            height={200}
-            resizeMode="contain"
-            style={{aspectRatio: 1}}
-          />
+          {book?.imageLinks?.thumbnail ? (
+            <Image
+              source={{
+                uri: book?.imageLinks?.thumbnail,
+              }}
+              width={200}
+              height={200}
+              resizeMode="contain"
+              style={{aspectRatio: 1}}
+            />
+          ) : (
+            <Image
+              source={require('../../assets/images/placeholder.png')}
+              width={200}
+              height={200}
+              resizeMode="contain"
+              style={{aspectRatio: 1}}
+            />
+          )}
         </View>
         <View style={style.descContainer}>
           <Text style={style.title} numberOfLines={3}>
