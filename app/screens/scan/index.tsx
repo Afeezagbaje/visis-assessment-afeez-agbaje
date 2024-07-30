@@ -56,7 +56,12 @@ export const ScanImage: React.FC = () => {
             buttonPositive: 'OK',
           },
         );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('granted', granted, PermissionsAndroid.RESULTS.GRANTED);
+        if (
+          granted === 'never_ask_again' ||
+          PermissionsAndroid.RESULTS.GRANTED === 'granted' ||
+          granted === PermissionsAndroid.RESULTS.GRANTED
+        ) {
           console.log('Camera permission granted');
         } else {
           console.log('Camera permission denied');
@@ -160,6 +165,7 @@ export const ScanImage: React.FC = () => {
     if (ocrResult) {
       searchForBook(ocrResult);
     }
+    console.log('OCR result: ', ocrResult);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ocrResult]);
 

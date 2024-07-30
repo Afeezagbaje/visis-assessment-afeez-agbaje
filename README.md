@@ -49,10 +49,10 @@ This is one way to run your app — you can also run it directly from within And
 - Regarding the implementation of the book details, all required information (such as Author and Title) was displayed. However, the 'Summary' was not shown because the book API returns multiple books at a time when searching, which complicates the display of summaries.
 - Additionally, the free OCR technology used is not very seamless; you need to capture only the name of the book to ensure it shows the correct results.
 
-# Link
+# Links
 
 To get the apk, github repository, and video demonstration:
 
-- [APK](https://drive.google.com/file/d/1MZCxJSv-kieglWXdcHUoS7QF5Z8jBLHx/view?usp=share_link).
-- [Github](https://reactnative.dev/docs/environment-setup).
-- [Video Walkthrough](https://reactnative.dev/docs/getting-started).
+- [APK](https://drive.google.com/file/d/14J7yqcEEM-Eop4VDYQ60vGGEh-c8ZK6b/view?usp=share_link).
+- [Github](https://github.com/Afeezagbaje/visis-assessment-afeez-agbaje.git).
+- [Video Walkthrough](https://vimeo.com/991990819).

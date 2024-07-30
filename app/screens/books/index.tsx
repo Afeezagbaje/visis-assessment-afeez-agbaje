@@ -6,6 +6,9 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Text} from '../../components';
 import {colors} from '../../theme/colors';
 
+const placholderImage =
+  'https://res.cloudinary.com/afeezagbaje/image/upload/v1722327985/images/v61lmvmdsxip7gcj6yye.png';
+
 export const Books: React.FC = () => {
   const style = useStyles();
 
@@ -15,25 +18,18 @@ export const Books: React.FC = () => {
     return (
       <View key={`Books-${index}`} style={style.bookContainer}>
         <View style={style.imageContainer}>
-          {book?.imageLinks?.thumbnail ? (
-            <Image
-              source={{
-                uri: book?.imageLinks?.thumbnail,
-              }}
-              width={200}
-              height={200}
-              resizeMode="contain"
-              style={{aspectRatio: 1}}
-            />
-          ) : (
-            <Image
-              source={require('../../assets/images/placeholder.png')}
-              width={200}
-              height={200}
-              resizeMode="contain"
-              style={{aspectRatio: 1}}
-            />
-          )}
+          <Image
+            source={{
+              uri:
+                book?.imageLinks?.thumbnail ||
+                book?.imageLinks?.small ||
+                placholderImage,
+            }}
+            width={200}
+            height={200}
+            resizeMode="contain"
+            // style={{aspectRatio: 1}}
+          />
         </View>
         <View style={style.descContainer}>
           <Text style={style.title} numberOfLines={3}>
